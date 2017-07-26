@@ -10,13 +10,17 @@ public class BoundedSemaphore {
 		  }
 
 		  public synchronized void take() throws InterruptedException{
-		    while(this.permit == bound) wait();
+		    while(this.permit == bound){
+		    	wait();
+		    }
 		    this.permit++;
 		    this.notify();
 		  }
 
 		  public synchronized void release() throws InterruptedException{
-		    while(this.permit == 0) wait();
+		    while(this.permit == 0){
+		    	wait();
+		    }
 		    this.permit--;
 		    this.notify();
 		  }
