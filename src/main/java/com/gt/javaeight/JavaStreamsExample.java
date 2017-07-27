@@ -20,7 +20,8 @@ public class JavaStreamsExample {
 		
 		//Stream<Integer> stream2 = Stream.of(new int[]{1,2,3,4}); 
 		
-		
+
+			
 		//******************
 		
 		List<Integer> myList = new ArrayList<>();
