@@ -13,12 +13,15 @@ public class SimpleCallableExample {
 		ExecutorService executorService = Executors.newSingleThreadExecutor();						
 	Future<Object> future = executorService.submit(new Callable<Object>(){				
 	    public Object call() throws Exception {				
-	        System.out.println("Asynchronous Callable");				
+	        System.out.println("Asynchronous Callable");	
+	        
+	       
 	        return "Callable Result";				
 	    }				
 	});				
-	
+	 Thread.sleep(10000);
 	String result =(String)future.get();
+	System.out.println("waiting for");
 	System.out.println(result);
 	
 	executorService.shutdown();
