@@ -42,7 +42,9 @@ public class CloningTest {
 		//Employee clonedEmpUsingApache = org.apache.commons.lang3.SerializationUtils.clone(emp);
 		
 		
-		//
+		//cloning using constructor
+		
+		Employee clonedEMpVIaConstrctuor = new Employee(emp);
 		
 	}
 
